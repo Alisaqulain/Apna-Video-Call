@@ -1,0 +1,263 @@
+.landingpagecontainer {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    position: relative; /* Ensure relative positioning */
+    display: flex;
+    flex-direction: column;
+}
+
+.landingpagecontainer::before {
+    content: "";
+    position: absolute; /* Use absolute instead of fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bgimage.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.5; /* Adjust for visibility */
+    filter: brightness(50%);
+}
+
+/* NAVIGATION */
+.landingpagecontainer nav {
+    padding-inline: 1.2rem;
+    padding-block: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.landingpagecontainer nav h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.landingpagecontainer nav .navlist {
+    display: flex;
+    gap: 1.6rem;
+    cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.landingMainContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    height: 80vh;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Keep content above background */
+}
+.landingMainContainer >div:nth-child(1){
+    font-size: 2.5rem;
+}
+.landingMainContainer >div:nth-child(1) div[role="button"]{
+
+    background: orange;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 100px;
+}
+.landingMainContainer >div:nth-child(1) div[role="button"] a{
+
+   text-decoration: none;
+   color: white;
+   font-size: 2rem;
+  
+   margin-top: 1.8rem;
+}
+
+.landingMainContainer img {
+    height: 70vh;
+    max-width: 100%;
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    object-fit: cover; /* Ensures the image fills its container */
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    .landingMainContainer {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-inline: 1rem;
+    }
+
+    .landingMainContainer img {
+        height: auto;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .landingpagecontainer::before {
+        background-size: cover;
+        background-attachment: fixed; /* Helps maintain background on scroll */
+    }
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    text-align: center;
+}
+.leftPanel{
+height: 100%;
+display: flex;
+align-items: center;
+}
+.rightPanel{
+    display: flex;
+    align-items: center;
+  
+}
+.rightPanel >img{
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
+.meetContainer{
+    display: flex;
+    padding-inline:20px ;
+    height: 80vh;
+    gap: 10vh;
+    justify-content: center;
+}
+/* General Layout */
+.video-call-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1e1e1e, #3b3b3b);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    color: red;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-button {
+    color: white;
+}
+
+.history-text {
+    font-size: 1.2rem;
+}
+
+.logout-button {
+    background-color: #ff4444;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    flex: 1;
+}
+
+/* Left Panel */
+.left-panel {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.text-field {
+    flex: 1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Join Button */
+.join-button {
+    background-color: #4caf50 !important;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #388e3c !important;
+}
+
+/* Right Panel */
+.right-panel {
+    max-width: 600px;
+}
+
+.illustration {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .left-panel,
+    .right-panel {
+        max-width: 100%;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+}
