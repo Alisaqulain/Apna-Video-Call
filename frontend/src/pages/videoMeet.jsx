@@ -16,7 +16,7 @@ import { Badge } from '@mui/material';
 import ChatIcon from '@mui/icons-material/Chat'; // Import ChatIcon
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
-
+import server from '../environment.js';
 
 
 
