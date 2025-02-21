@@ -20,7 +20,7 @@ import server from '../environment.js';
 
 
 
-const server_url = "http://localhost:9000";
+const server_url = server;
 var connections = {};
 const peerConfigConnection = {
   iceServers: [
